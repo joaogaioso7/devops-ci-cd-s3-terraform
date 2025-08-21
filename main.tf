@@ -4,6 +4,9 @@ provider "aws" {
 
 resource "aws_s3_bucket" "exemplo_s3" {
   bucket = "my-bucket-created-tf-25"
+  tags = {
+    Name = "Terraform Actions"
+  }
 }
 
 resource "aws_s3_bucket_ownership_controls" "exemplo_s3" {
