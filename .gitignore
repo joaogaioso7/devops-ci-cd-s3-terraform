@@ -44,3 +44,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# key-pair
+aws-teste-actions
+aws-teste-actions.pub
