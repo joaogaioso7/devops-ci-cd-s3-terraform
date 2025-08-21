@@ -1,8 +1,3 @@
-resource "aws_key_pair" "key-actions" {
-  key_name   = "aws-teste-actions"
-  public_key = file("./aws-teste-actions.pub")
-}
-
 resource "aws_security_group" "sg-teste-actions" {
   name = "teste-actions-sg"
   ingress {
@@ -22,7 +17,7 @@ resource "aws_security_group" "sg-teste-actions" {
 resource "aws_instance" "vm-actions" {
   ami                         = "ami-00ca32bbc84273381"
   instance_type               = "t3.micro"
-  key_name                    = aws_key_pair.key-actions.key_name
+  key_name                    = "teste-poc"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg-teste-actions.id]
   tags = {
