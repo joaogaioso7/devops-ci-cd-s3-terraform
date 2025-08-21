@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    name: 'Terraform Lint, Security Check, and Deploy'
+    name: 'Terraform Validate and Deploy'
     runs-on: ubuntu-latest
 
     env:
