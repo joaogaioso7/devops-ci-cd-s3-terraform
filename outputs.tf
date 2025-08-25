@@ -12,3 +12,8 @@ output "sg_vm_id" {
   description = "ID do security group"
   value       = aws_security_group.sg-teste-actions.id
 }
+
+output "lambda_arn" {
+  description = "Lambda ARN"
+  value = aws_lambda_function.lambda-terraform.arn
+}
