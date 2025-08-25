@@ -15,7 +15,7 @@ resource "aws_security_group" "sg-teste-actions" {
 }
 
 resource "aws_instance" "vm-actions" {
-  ami                         = ami-00ca32bbc84273381
+  ami                         = "ami-00ca32bbc84273381"
   instance_type               = "t3.micro"
   key_name                    = "teste-poc"
   associate_public_ip_address = true
